@@ -1,6 +1,6 @@
 # [START app]
 import logging
-
+import datetime
 from flask import Flask
 
 
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello World, Vansh!'
+    return 'Hello World, Vansh!. ' + str(datetime.datetime.now())
 
 
 @app.errorhandler(500)
